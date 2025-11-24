@@ -30,6 +30,8 @@ export const TRANSLATIONS = {
       question_progress: "问题 {current} / {total}",
       match_recommend: "推荐匹配：",
       match_secure: "安全型依恋",
+      more_tests: "更多心理测试",
+      fun_test_btn: "开始测试",
     },
     chart: {
       anxious_high: "高焦虑",
@@ -79,6 +81,139 @@ export const TRANSLATIONS = {
       { value: 6, label: "比较符合" },
       { value: 7, label: "完全符合" }
     ],
+    fun_tests: [
+      {
+        id: 'subconscious_love',
+        title: "潜意识恋爱类型测试",
+        subtitle: "日本超火的心理测试，测测你内心真正喜欢的类型",
+        image: "https://images.unsplash.com/photo-1516961642265-531546e84af2?q=80&w=3000&auto=format&fit=crop",
+        question: "你刚打扫完自己的房间。过了一会儿，突然出现了一个充满回忆的物品出现在你的眼前，那会是什么?",
+        options: [
+          {
+            id: 'A',
+            label: "小时候玩过的娃娃",
+            result: {
+              title: "像可爱的少年一样，什么都能说的朋友",
+              desc: "选择小时候玩过的娃娃的你，真正喜欢的类型是“像可爱的少年一样，什么都能说的朋友”。可能会被周围的人说适合年长的人，但实际上你真正追求的异性是完全相反的类型。\n\n选择了象征着朋友的存在的娃娃的你，应该有很多时候都希望能和对方有着非常亲密的关系，希望彼此之间是那种什么都可以说的存在。因此，像这样什么都能说的朋友的人可能是真正适合你的人，或者是潜意识里喜欢的类型。而且和这样的人在一起，即使是从朋友关系发展到恋人关系后，也不会感到尴尬，反而两个人的感情会更加亲密。"
+            }
+          },
+          {
+            id: 'B',
+            label: "充满回忆的相册",
+            result: {
+              title: "同龄人或有交情的青梅竹马",
+              desc: "选择回忆的相册的你真正喜欢的类型是“同龄人或有交情的青梅竹马”。从小就认识的，能让你想起那种怀念的感觉的人就是你心里最渴望的类型吧。\n\n比如，这个人是你的青梅竹马，瞬间有一种很亲切的感觉，突然回忆起两人儿时的快乐记忆。最让你心动的是，不管在什么地方相遇，两个人总是有聊不完的共同话题，每当一个话题结束就会马上有新的话题，两个人聊天中不断发现彼此的共同点，慢慢地产生好感，发展成恋爱关系。"
+            }
+          },
+          {
+            id: 'C',
+            label: "在学校做过的试卷",
+            result: {
+              title: "什么都能告诉你，永远支持你所有决定的年长型伴侣",
+              desc: "选择了在学校进行的考试的你真正喜欢的类型是“什么都能告诉你，永远支持你所有决定的年长型伴侣。”\n\n当你回顾学校的考试，自己的成绩和答案一目了然。选择这个测试的你，在心理上想要得到比自己更“高”的人的认可，正是因为这样的想法，才会本能地选择比自己年长的对象，希望他能成为温柔守护你的人。如果年龄上不属于年长型，但心理成熟，能够宠着你，守护你，支持你，这种类型的伴侣也是你内心里非常渴望的。"
+            }
+          },
+          {
+            id: 'D',
+            label: "很久之前比较流行的文具",
+            result: {
+              title: "不在乎外表，和自己步调一致的类型",
+              desc: "选择以前流行的文具的你真正喜欢的类型是“不在乎外表，和自己步调一致的类型”。\n\n当你和对方谈话或约会时，如果发现觉得对方的步调不一致，你就会马上感觉自己无法和对方继续建立亲密关系。与其说是根据第一印象来决定，不如说你更注重的是两人相处的感觉和在一起的氛围，只有遇上感觉对的人，才能真正地开始恋爱。"
+            }
+          }
+        ]
+      },
+      {
+        id: 'blue_bird',
+        title: "青鸟的预兆",
+        subtitle: "经典心理测试，测测你在面对困难和爱情时的态度",
+        image: "https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=3000&auto=format&fit=crop",
+        question: "有一天，一只青鸟突然飞进你的房间被困住了。你决定收留它。但让你惊讶的是，第二天它从蓝色变成了黄色！这只鸟很特别，每天都会变色。第三天早上它是红色的，第四天是黑色的。第五天当你醒来时，你觉得它会变成什么颜色？",
+        options: [
+          {
+            id: 'A',
+            label: "黑色",
+            result: {
+              title: "悲观主义者",
+              desc: "你倾向于相信即便情况好转，也只会是短暂的。在爱情中，你可能过于小心翼翼，甚至有些杞人忧天。试着相信如果你往好的方面想，事情真的会变好。"
+            }
+          },
+          {
+            id: 'B',
+            label: "蓝色（变回原来的颜色）",
+            result: {
+              title: "务实的乐观主义者",
+              desc: "你相信生活就是好坏参半的，不会过度乐观也不会过度悲观。在感情中，你能够接受现实，不会因一时的波折而动摇。你以一种非常健康的心态面对关系。"
+            }
+          },
+          {
+            id: 'C',
+            label: "白色",
+            result: {
+              title: "冷静果断的决策者",
+              desc: "你在压力面前非常冷静。在感情中，如果觉得不合适，你会果断放手，不拖泥带水。这种决断力是你的魅力，但也可能让你显得有些冷酷。"
+            }
+          },
+          {
+            id: 'D',
+            label: "金黄色",
+            result: {
+              title: "无畏的冒险家",
+              desc: "你对生活充满信心，哪怕面对危机也相信会有奇迹。在爱情中，你敢爱敢恨，不怕受伤。你的热情极具感染力，但有时也需要注意现实的风险。"
+            }
+          }
+        ]
+      },
+      {
+        id: 'forest_journey',
+        title: "森林漫步之旅",
+        subtitle: "这是一次心灵的旅程，揭示你潜意识里对伴侣、欲望和未来的看法",
+        image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=3000&auto=format&fit=crop",
+        questions: [
+            {
+                question: "1. 想象你在森林里漫步。阳光明媚，微风拂面。你并不是独自一人。请问，你是和谁在一起？",
+                options: [
+                    { id: 'A', label: "伴侣或暗恋的人", result: { title: "现在最重要的人", desc: "这个人是你生命中最重要的人。你在潜意识里非常依赖和重视这段关系。" } },
+                    { id: 'B', label: "家人", result: { title: "家庭观念重", desc: "你非常看重家庭的纽带，家人是你内心深处最柔软的部分。" } },
+                    { id: 'C', label: "朋友", result: { title: "社交与支持", desc: "朋友对你来说是不可或缺的，你在生活中非常依赖社交支持系统。" } },
+                    { id: 'D', label: "独自一人", result: { title: "独立自主", desc: "你内心强大且独立，或者目前的你更享受一个人的时光。" } }
+                ]
+            },
+            {
+                question: "2. 继续向前走，你遇到了一只动物。这是一只什么样的动物？",
+                options: [
+                    { id: 'A', label: "兔子或松鼠（小动物）", result: { title: "生活中的小烦恼", desc: "你觉得目前生活中的问题都不大，是可以轻松解决的。" } },
+                    { id: 'B', label: "狗或猫（中型动物）", result: { title: "可控的挑战", desc: "你意识到生活中有挑战，但你有信心掌控它们。" } },
+                    { id: 'C', label: "熊或狮子（大型动物）", result: { title: "巨大的压力", desc: "你目前可能面临着巨大的生活压力或难题，让你感到有些难以招架。" } }
+                ]
+            },
+            {
+                question: "3. 你继续深入森林，来到一片空地，看到了一座房子。这座房子有多大？",
+                options: [
+                    { id: 'A', label: "小木屋", result: { title: "知足常乐", desc: "你的野心不大，更向往简单、安稳的生活。" } },
+                    { id: 'B', label: "普通住宅", result: { title: "脚踏实地", desc: "你有务实的目标和追求，希望过上标准、幸福的生活。" } },
+                    { id: 'C', label: "巨大的城堡", result: { title: "雄心勃勃", desc: "你有很大的野心和抱负，渴望在生活中取得巨大的成就。" } }
+                ]
+            },
+            {
+                question: "4. 你走进房子，看到桌子上有一个杯子。这个杯子是什么材质的？",
+                options: [
+                    { id: 'A', label: "塑料或纸杯", result: { title: "关系脆弱", desc: "你可能感觉刚才和你一起漫步的人（或你目前的亲密关系）不够稳固，容易破碎。" } },
+                    { id: 'B', label: "玻璃或陶瓷", result: { title: "美丽但易碎", desc: "你认为这段关系很美好，但也需要小心呵护，否则容易产生裂痕。" } },
+                    { id: 'C', label: "金属或木头", result: { title: "坚不可摧", desc: "你认为这段关系非常稳固，经得起时间的考验。" } }
+                ]
+            },
+            {
+                question: "5. 你走出后门，看到了一片水域。这是一片什么样的水？",
+                options: [
+                    { id: 'A', label: "小水坑", result: { title: "欲望平淡", desc: "性或身体亲密在目前的你看来并不是最重要的。" } },
+                    { id: 'B', label: "河流或湖泊", result: { title: "适度的需求", desc: "你对亲密关系有健康、适度的需求。" } },
+                    { id: 'C', label: "广阔的大海", result: { title: "强烈的渴望", desc: "你内心深处对性或深刻的情感融合有着强烈的渴望。" } }
+                ]
+            }
+        ]
+      }
+    ],
     types: {
       SECURE: {
         name: "安全型依恋 (Secure)",
@@ -117,7 +252,7 @@ export const TRANSLATIONS = {
         growth: [
             "重新定义独立：真正的强大是能够展示脆弱，而不仅仅是推开他人。",
             "练习表达感受：从简单的“我今天有点累”开始分享，而不是直接沉默。",
-            "当想逃离时，试着留下来，告诉伴侣“我需要一点空间”，而不是直接消失。",
+            "当想逃离时，试著留下來，告诉伴侣“我需要一点空间”，而不是直接消失。",
             "尝试依靠他人完成一些小事。"
         ]
       },
@@ -167,6 +302,8 @@ export const TRANSLATIONS = {
       question_progress: "問題 {current} / {total}",
       match_recommend: "推薦匹配：",
       match_secure: "安全型依戀",
+      more_tests: "更多心理測試",
+      fun_test_btn: "開始測試",
     },
     chart: {
       anxious_high: "高焦慮",
@@ -216,6 +353,139 @@ export const TRANSLATIONS = {
       { value: 6, label: "比較符合" },
       { value: 7, label: "完全符合" }
     ],
+    fun_tests: [
+      {
+        id: 'subconscious_love',
+        title: "潛意識戀愛類型測試",
+        subtitle: "日本超火的心理測試，測測你內心真正喜歡的類型",
+        image: "https://images.unsplash.com/photo-1516961642265-531546e84af2?q=80&w=3000&auto=format&fit=crop",
+        question: "你剛打掃完自己的房間。過了一會兒，突然出現了一個充滿回憶的物品出現在你的眼前，那會是什麼?",
+        options: [
+          {
+            id: 'A',
+            label: "小時候玩過的娃娃",
+            result: {
+              title: "像可愛的少年一樣，什麼都能說的朋友",
+              desc: "選擇小時候玩過的娃娃的你，真正喜歡的類型是“像可愛的少年一樣，什麼都能說的朋友”。可能會被周圍的人說適合年長的人，但實際上你真正追求的異性是完全相反的類型。\n\n選擇了象徵著朋友的存在的娃娃的你，應該有很多時候都希望能和對方有著非常親密的關係，希望彼此之間是那種什麼都可以說的存在。因此，像這樣什麼都能說的朋友的人可能是真正適合你的人，或者是潛意識裡喜歡的類型。而且和這樣的人在一起，即使是從朋友關係發展到戀人關係後，也不會感到尷尬，反而兩個人的感情會更加親密。"
+            }
+          },
+          {
+            id: 'B',
+            label: "充滿回憶的相簿",
+            result: {
+              title: "同齡人或有交情的青梅竹馬",
+              desc: "選擇回憶的相簿的你真正喜歡的類型是“同齡人或有交情的青梅竹馬”。從小就認識的，能讓你想起那種懷念的感覺的人就是你心裡最渴望的類型吧。\n\n比如，這個人是你的青梅竹馬，瞬間有一種很親切的感覺，突然回憶起兩人兒時的快樂記憶。最讓你心動的是，不管在什麼地方相遇，兩個人總是有聊不完的共同話題，每當一個話題結束就會馬上由新的話題，兩個人聊天中不斷發現彼此的共同點，慢慢地產生好感，發展成戀愛關係。"
+            }
+          },
+          {
+            id: 'C',
+            label: "在學校做過的試卷",
+            result: {
+              title: "什麼都能告訴你，永遠支持你所有決定的年長型伴侶",
+              desc: "選擇了在學校進行的考試的你真正喜歡的類型是“什麼都能告訴你，永遠支持你所有決定的年長型伴侶。”\n\n當你回顧學校的考試，自己的成績和答案一目了然。選擇這個測試的你，在心理上想要得到比自己更“高”的人的認可，正是因為這樣的想法，才會本能地選擇比自己年長的對象，希望他能成為溫柔守護你的人。如果年齡上不屬於年長型，但心理成熟，能夠寵著你，守護你，支持你，這種類型的伴侶也是你內心裡非常渴望的。"
+            }
+          },
+          {
+            id: 'D',
+            label: "很久之前比較流行的文具",
+            result: {
+              title: "不在乎外表，和自己步調一致的類型",
+              desc: "選擇以前流行的文具的你真正喜歡的類型是“不在乎外表，和自己步調一致的類型”。\n\n當你和對方談話或約會時，如果發現覺得對方的步調不一致，你就會馬上感覺自己無法和對方繼續建立親密關係。與其說是根據第一印象來決定，不如說你更注重的是兩人相處的感覺和在一起的氛圍，只有遇上感覺對的人，才能真正地開始戀愛。"
+            }
+          }
+        ]
+      },
+      {
+        id: 'blue_bird',
+        title: "青鳥的預兆",
+        subtitle: "經典心理測試，測測你在面對困難和愛情時的態度",
+        image: "https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=3000&auto=format&fit=crop",
+        question: "有一天，一隻青鳥突然飛進你的房間被困住了。你決定收留牠。但讓你驚訝的是，第二天牠從藍色變成了黃色！這隻鳥很特別，每天都會變色。第三天早上它是紅色的，第四天是黑色的。第五天當你醒來時，你覺得牠會變成什麼顏色？",
+        options: [
+          {
+            id: 'A',
+            label: "黑色",
+            result: {
+              title: "悲觀主義者",
+              desc: "你傾向於相信即便情況好轉，也只會是短暫的。在愛情中，你可能過於小心翼翼，甚至有些杞人憂天。試著相信如果你往好的方面想，事情真的會變好。"
+            }
+          },
+          {
+            id: 'B',
+            label: "藍色（變回原來的顏色）",
+            result: {
+              title: "務實的樂觀主義者",
+              desc: "你相信生活就是好壞參半的，不會過度樂觀也不會過度悲觀。在感情中，你能夠接受現實，不會因一時的波折而動搖。你以一種非常健康的心態面對關係。"
+            }
+          },
+          {
+            id: 'C',
+            label: "白色",
+            result: {
+              title: "冷靜果斷的決策者",
+              desc: "你在壓力面前非常冷靜。在感情中，如果覺得不合適，你會果斷放手，不拖泥帶水。這種決斷力是你的魅力，但也可能讓你顯得有些冷酷。"
+            }
+          },
+          {
+            id: 'D',
+            label: "金黃色",
+            result: {
+              title: "無畏的冒險家",
+              desc: "你對生活充滿信心，哪怕面對危機也相信會有奇蹟。在愛情中，你敢愛敢恨，不怕受傷。你的熱情極具感染力，但有時也需要注意現實的風險。"
+            }
+          }
+        ]
+      },
+      {
+        id: 'forest_journey',
+        title: "森林漫步之旅",
+        subtitle: "這是一次心靈的旅程，揭示你潛意識裡對伴侶、慾望和未來的看法",
+        image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=3000&auto=format&fit=crop",
+        questions: [
+            {
+                question: "1. 想像你在森林裡漫步。陽光明媚，微風拂面。你並不是獨自一人。請問，你是和誰在一起？",
+                options: [
+                    { id: 'A', label: "伴侶或暗戀的人", result: { title: "現在最重要的人", desc: "這個人是你生命中最重要的人。你在潛意識裡非常依賴和重視這段關係。" } },
+                    { id: 'B', label: "家人", result: { title: "家庭觀念重", desc: "你非常看重家庭的紐帶，家人是你內心深處最柔軟的部分。" } },
+                    { id: 'C', label: "朋友", result: { title: "社交與支持", desc: "朋友對你來說是不可或缺的，你在生活中非常依賴社交支持系統。" } },
+                    { id: 'D', label: "獨自一人", result: { title: "獨立自主", desc: "你內心強大且獨立，或者目前的你更享受一個人的時光。" } }
+                ]
+            },
+            {
+                question: "2. 繼續向前走，你遇到了一隻動物。這是一隻什麼樣的動物？",
+                options: [
+                    { id: 'A', label: "兔子或松鼠（小動物）", result: { title: "生活中的小煩惱", desc: "你覺得目前生活中的問題都不大，是可以輕鬆解決的。" } },
+                    { id: 'B', label: "狗或貓（中型動物）", result: { title: "可控的挑戰", desc: "你意識到生活中有挑戰，但你有信心掌控它們。" } },
+                    { id: 'C', label: "熊或獅子（大型動物）", result: { title: "巨大的壓力", desc: "你目前可能面臨著巨大的生活壓力或難題，讓你感到有些難以招架。" } }
+                ]
+            },
+            {
+                question: "3. 你繼續深入森林，來到一片空地，看到了一座房子。這座房子有多大？",
+                options: [
+                    { id: 'A', label: "小木屋", result: { title: "知足常樂", desc: "你的野心不大，更嚮往簡單、安穩的生活。" } },
+                    { id: 'B', label: "普通住宅", result: { title: "腳踏實地", desc: "你有務實的目標和追求，希望過上標準、幸福的生活。" } },
+                    { id: 'C', label: "巨大的城堡", result: { title: "雄心勃勃", desc: "你有很大的野心和抱負，渴望在生活中取得巨大的成就。" } }
+                ]
+            },
+            {
+                question: "4. 你走進房子，看到桌子上有一個杯子。這個杯子是什麼材質的？",
+                options: [
+                    { id: 'A', label: "塑膠或紙杯", result: { title: "關係脆弱", desc: "你可能感覺剛才和你一起漫步的人（或你目前的親密關係）不夠穩固，容易破碎。" } },
+                    { id: 'B', label: "玻璃或陶瓷", result: { title: "美麗但易碎", desc: "你認為這段關係很美好，但也需要小心呵護，否則容易產生裂痕。" } },
+                    { id: 'C', label: "金屬或木頭", result: { title: "堅不可摧", desc: "你認為這段關係非常穩固，經得起時間的考驗。" } }
+                ]
+            },
+            {
+                question: "5. 你走出後門，看到了一片水域。這是一片什麼樣的水？",
+                options: [
+                    { id: 'A', label: "小水坑", result: { title: "慾望平淡", desc: "性或身體親密在目前的你看來並不是最重要的。" } },
+                    { id: 'B', label: "河流或湖泊", result: { title: "適度的需求", desc: "你對親密關係有健康、適度的需求。" } },
+                    { id: 'C', label: "廣闊的大海", result: { title: "強烈的渴望", desc: "你內心深處對性或深刻的情感融合有著強烈的渴望。" } }
+                ]
+            }
+        ]
+      }
+    ],
     types: {
       SECURE: {
         name: "安全型依戀 (Secure)",
@@ -263,7 +533,7 @@ export const TRANSLATIONS = {
         shortName: "恐懼型",
         desc: "處於矛盾之中：既渴望親密，又極度恐懼受傷。可能表現出「忽冷忽熱」的特質，想靠近卻又在靠近時感到恐慌。",
         detailedInfo: "恐懼型依戀者（也稱混亂型）通常經歷過創傷或極不穩定的照顧。想愛卻不敢愛。在關係中，可能在極其黏人和極其冷漠之間搖擺。",
-        idealMatch: "安全型依戀者是療癒的最佳助攻，因為他們極其穩定。但如果有伴侶（無論何種類型）願意展現極大的耐心，並接受心理諮詢的輔助，關係依然可以很美好。這並非絕路，而是成長的起點。",
+        idealMatch: "安全型依戀者是療癒的最佳助攻，因為他們極其穩定。但如果有伴侣（無論何種類型）願意展現極大的耐心，並接受心理諮詢的輔助，關係依然可以很美好。這並非絕路，而是成長的起點。",
         badMatch: "情緒極不穩定、忽冷忽熱的伴侶。這種不確定性會加劇內在混亂，讓關係充滿戲劇性和痛苦。",
         growth: [
             "尋求專業幫助：療癒過去的創傷是關鍵，不要獨自承擔所有。",
@@ -304,6 +574,8 @@ export const TRANSLATIONS = {
       question_progress: "Question {current} / {total}",
       match_recommend: "Recommended Match:",
       match_secure: "Secure Attachment",
+      more_tests: "More Psychology Tests",
+      fun_test_btn: "Start Test",
     },
     chart: {
       anxious_high: "High Anxiety",
@@ -352,6 +624,139 @@ export const TRANSLATIONS = {
       { value: 5, label: "Somewhat Agree" },
       { value: 6, label: "Agree" },
       { value: 7, label: "Strongly Agree" }
+    ],
+    fun_tests: [
+      {
+        id: 'subconscious_love',
+        title: "Subconscious Love Type",
+        subtitle: "Discover the type of person you subconsciously like",
+        image: "https://images.unsplash.com/photo-1516961642265-531546e84af2?q=80&w=3000&auto=format&fit=crop",
+        question: "You just finished cleaning your room. After a while, a nostalgic item appears before your eyes. What is it?",
+        options: [
+          {
+            id: 'A',
+            label: "A doll from your childhood",
+            result: {
+              title: "A friend you can say anything to",
+              desc: "You subconsciously seek a partner who is like a cute, open friend. You might be told you suit an older person, but you actually want an intimate relationship where you can share everything, like a childhood friend. No awkwardness even if you transition from friends to lovers."
+            }
+          },
+          {
+            id: 'B',
+            label: "A photo album full of memories",
+            result: {
+              title: "A peer or childhood friend",
+              desc: "You desire someone you've known since childhood or who gives you that nostalgic feeling. You value having endless common topics. You fall in love through conversation and finding shared points."
+            }
+          },
+          {
+            id: 'C',
+            label: "School test papers",
+            result: {
+              title: "An older partner who supports you",
+              desc: "You want approval from someone 'higher' than you. You instinctively choose older partners or mature ones who can protect, spoil, and support you. You seek a gentle guardian."
+            }
+          },
+          {
+            id: 'D',
+            label: "Stationery popular long ago",
+            result: {
+              title: "Someone with the same pace",
+              desc: "You care about the vibe and pacing. If the pace doesn't match, you can't get close. You don't care about first impressions as much as the feeling of being together. You only start a relationship when the feeling is right."
+            }
+          }
+        ]
+      },
+      {
+        id: 'blue_bird',
+        title: "The Omen of the Blue Bird",
+        subtitle: "A classic test revealing your attitude towards difficulty and love",
+        image: "https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=3000&auto=format&fit=crop",
+        question: "One day, a blue bird flies into your room and is trapped. You decide to keep it. But to your surprise, the next day it changes from blue to yellow! The bird is special and changes color every day. On the third day it's red, and on the fourth it's black. What color is the bird when you wake up on the fifth day?",
+        options: [
+          {
+            id: 'A',
+            label: "Black",
+            result: {
+              title: "Pessimist",
+              desc: "You tend to believe that even if things improve, it will only be temporary. In love, you might be overly cautious or worry too much. Try to believe that if you think positively, things will actually get better."
+            }
+          },
+          {
+            id: 'B',
+            label: "Blue (Back to original)",
+            result: {
+              title: "Pragmatic Optimist",
+              desc: "You believe life is a mix of good and bad. You are neither overly optimistic nor pessimistic. In relationships, you accept reality and are not easily shaken by temporary setbacks. You have a very healthy mindset."
+            }
+          },
+          {
+            id: 'C',
+            label: "White",
+            result: {
+              title: "Cool and Decisive",
+              desc: "You remain very calm under pressure. In relationships, if you feel it's not right, you will let go decisively without dragging it out. This decisiveness is your charm, but it can also make you seem a bit cold."
+            }
+          },
+          {
+            id: 'D',
+            label: "Golden",
+            result: {
+              title: "Fearless Adventurer",
+              desc: "You are full of confidence in life, believing in miracles even in crises. In love, you love boldly and aren't afraid of getting hurt. Your passion is infectious, but sometimes you need to be aware of realistic risks."
+            }
+          }
+        ]
+      },
+      {
+        id: 'forest_journey',
+        title: "A Walk in the Woods",
+        subtitle: "A journey into your subconscious views on partners, desires, and the future",
+        image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=3000&auto=format&fit=crop",
+        questions: [
+            {
+                question: "1. Imagine you are walking in a forest. It's sunny and breezy. You are not alone. Who are you walking with?",
+                options: [
+                    { id: 'A', label: "Partner or Crush", result: { title: "Most Important Person", desc: "This person is the most important one in your life right now." } },
+                    { id: 'B', label: "Family", result: { title: "Family Oriented", desc: "You value family bonds highly; they are the softest part of your heart." } },
+                    { id: 'C', label: "Friend", result: { title: "Social Support", desc: "Friends are indispensable to you, and you rely heavily on your social support system." } },
+                    { id: 'D', label: "Alone", result: { title: "Independent", desc: "You are inwardly strong and independent, or currently enjoying your solitude." } }
+                ]
+            },
+            {
+                question: "2. Continuing on, you encounter an animal. What kind of animal is it?",
+                options: [
+                    { id: 'A', label: "Rabbit or Squirrel (Small)", result: { title: "Small Worries", desc: "You feel that current life problems are small and easily solvable." } },
+                    { id: 'B', label: "Dog or Cat (Medium)", result: { title: "Manageable Challenges", desc: "You realize there are challenges, but you are confident in handling them." } },
+                    { id: 'C', label: "Bear or Lion (Large)", result: { title: "Huge Pressure", desc: "You may be facing huge life pressures or difficulties that feel overwhelming." } }
+                ]
+            },
+            {
+                question: "3. You go deeper into the forest and come to a clearing with a house. How big is the house?",
+                options: [
+                    { id: 'A', label: "Small Cabin", result: { title: "Contented", desc: "You don't have huge ambitions; you yearn for a simple, stable life." } },
+                    { id: 'B', label: "Normal House", result: { title: "Grounded", desc: "You have practical goals and seek a standard, happy life." } },
+                    { id: 'C', label: "Huge Castle", result: { title: "Ambitious", desc: "You have great ambitions and desire huge achievements in life." } }
+                ]
+            },
+            {
+                question: "4. You enter the house and see a cup on the table. What is it made of?",
+                options: [
+                    { id: 'A', label: "Plastic or Paper", result: { title: "Fragile Relationship", desc: "You may feel your current relationship (or the person you walked with) is not solid enough." } },
+                    { id: 'B', label: "Glass or Ceramic", result: { title: "Beautiful but Fragile", desc: "You think the relationship is beautiful but needs care, otherwise it might crack." } },
+                    { id: 'C', label: "Metal or Wood", result: { title: "Unbreakable", desc: "You believe this relationship is very solid and can stand the test of time." } }
+                ]
+            },
+            {
+                question: "5. You exit the back door and see a body of water. What is it?",
+                options: [
+                    { id: 'A', label: "Puddle", result: { title: "Low Desire", desc: "Sex or physical intimacy is not the most important thing to you right now." } },
+                    { id: 'B', label: "River or Lake", result: { title: "Moderate Needs", desc: "You have healthy, moderate needs for intimacy." } },
+                    { id: 'C', label: "Vast Ocean", result: { title: "Strong Desire", desc: "Deep down, you have a strong craving for deep emotional or physical fusion." } }
+                ]
+            }
+        ]
+      }
     ],
     types: {
       SECURE: {
@@ -441,6 +846,8 @@ export const TRANSLATIONS = {
       question_progress: "質問 {current} / {total}",
       match_recommend: "推奨マッチ：",
       match_secure: "安定型",
+      more_tests: "その他の心理テスト",
+      fun_test_btn: "診断を始める",
     },
     chart: {
       anxious_high: "不安 高",
@@ -489,6 +896,139 @@ export const TRANSLATIONS = {
       { value: 5, label: "やや当てはまる" },
       { value: 6, label: "当てはまる" },
       { value: 7, label: "非常に当てはまる" }
+    ],
+    fun_tests: [
+      {
+        id: 'subconscious_love',
+        title: "潜在意識の恋愛タイプ診断",
+        subtitle: "日本で話題の心理テスト！深層心理で求めている異性のタイプは？",
+        image: "https://images.unsplash.com/photo-1516961642265-531546e84af2?q=80&w=3000&auto=format&fit=crop",
+        question: "あなたが自分の部屋を掃除していました。しばらくすると、とても懐かしいものが出てきました。それは何？",
+        options: [
+          {
+            id: 'A',
+            label: "子供の頃に遊んだ人形",
+            result: {
+              title: "なんでも話せる友達のような人",
+              desc: "子供の頃の人形を選んだあなたが本当に好きなタイプは、「可愛らしい少年のように、何でも話せる友達」です。周囲からは年上が合うと言われるかもしれませんが、実際には正反対のタイプを求めています。\n\n友達の象徴である人形を選んだあなたは、相手と非常に親密な関係を望み、何でも言い合える存在を求めています。友達から恋人に発展しても気まずくならず、むしろ二人の絆はより深まるでしょう。"
+            }
+          },
+          {
+            id: 'B',
+            label: "思い出の詰まったアルバム",
+            result: {
+              title: "同年代や幼馴染のような人",
+              desc: "思い出のアルバムを選んだあなたが本当に好きなタイプは、「同年代や付き合いのある幼馴染」です。昔から知っているような、懐かしい感覚を思い出させてくれる人が、あなたが心から求めているタイプでしょう。\n\n例えば、幼馴染のように瞬時に親近感を感じ、子供の頃の楽しい記憶が蘇るような人です。会話が尽きず、共通点を次々と発見し、自然と好意が芽生えて恋愛関係へと発展していくでしょう。"
+            }
+          },
+          {
+            id: 'C',
+            label: "学校で受けたテスト用紙",
+            result: {
+              title: "全てを受け入れ、支持してくれる年上のパートナー",
+              desc: "学校のテストを選んだあなたが本当に好きなタイプは、「何でも教えてくれて、あなたの決断を永遠に支持してくれる年上タイプ」です。\n\nテストを振り返ると、自分の成績や答えが一目瞭然です。この選択肢を選んだあなたは、心理的に自分より「上」の人からの承認を求めています。優しく見守り、甘えさせてくれ、支持してくれる、そんな包容力のあるパートナーを本能的に求めているのです。"
+            }
+          },
+          {
+            id: 'D',
+            label: "昔流行った文房具",
+            result: {
+              title: "外見を気にせず、波長の合う人",
+              desc: "昔流行った文房具を選んだあなたが本当に好きなタイプは、「外見を気にせず、自分とペースが合う人」です。\n\n会話やデートの際、相手とのペースが合わないと感じると、すぐに親密な関係を築くのを諦めてしまいます。第一印象よりも、一緒にいる時の感覚や雰囲気を重視します。感覚が合う人と出会った時こそ、本当の恋が始まります。"
+            }
+          }
+        ]
+      },
+      {
+        id: 'blue_bird',
+        title: "青い鳥の予兆",
+        subtitle: "困難や恋愛に対するあなたの態度を測る古典的な心理テスト",
+        image: "https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=3000&auto=format&fit=crop",
+        question: "ある日、青い鳥があなたの部屋に飛び込んできて閉じ込められてしまいました。あなたはそれを飼うことにしました。しかし驚いたことに、翌日には青から黄色に変わっていました！この鳥は特別で、毎日色が変わります。3日目の朝には赤色、4日目には黒色になっていました。5日目の朝、目覚めたときに何色になっていると思いますか？",
+        options: [
+          {
+            id: 'A',
+            label: "黒色",
+            result: {
+              title: "悲観主義者",
+              desc: "あなたは、たとえ状況が好転しても、それは一時的なものだと信じる傾向があります。恋愛においては、過度に慎重になったり、取り越し苦労をしたりするかもしれません。「良い方向に考えれば、本当に良くなる」と信じてみてください。"
+            }
+          },
+          {
+            id: 'B',
+            label: "青色（元の色に戻る）",
+            result: {
+              title: "現実的な楽観主義者",
+              desc: "あなたは人生は良いことも悪いことも入り混じっていると信じており、過度に楽観的でも悲観的でもありません。人間関係においても現実を受け入れ、一時的なトラブルに動じることはありません。非常に健全なメンタルを持っています。"
+            }
+          },
+          {
+            id: 'C',
+            label: "白色",
+            result: {
+              title: "冷静で断固とした決断者",
+              desc: "あなたはプレッシャーの中でも非常に冷静です。人間関係において、合わないと感じれば、未練を残さずきっぱりと手放します。その決断力は魅力ですが、時には冷酷に見えることもあります。"
+            }
+          },
+          {
+            id: 'D',
+            label: "金色",
+            result: {
+              title: "恐れを知らない冒険家",
+              desc: "あなたは人生に自信を持っており、危機に直面しても奇跡を信じます。恋愛においては、傷つくことを恐れず大胆に愛します。あなたの情熱は周りを惹きつけますが、現実的なリスクにも注意が必要です。"
+            }
+          }
+        ]
+      },
+      {
+        id: 'forest_journey',
+        title: "森の散歩道",
+        subtitle: "パートナー、欲望、未来に対するあなたの潜在意識を明らかにする心の旅",
+        image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=3000&auto=format&fit=crop",
+        questions: [
+            {
+                question: "1. 森の中を歩いていると想像してください。晴れていて、そよ風が吹いています。あなたは一人ではありません。誰と一緒にいますか？",
+                options: [
+                    { id: 'A', label: "パートナーや好きな人", result: { title: "今、一番大切な人", desc: "この人はあなたの人生で今最も重要な人です。" } },
+                    { id: 'B', label: "家族", result: { title: "家族想い", desc: "あなたは家族の絆を非常に大切にしています。" } },
+                    { id: 'C', label: "友達", result: { title: "社交的", desc: "友達はあなたにとって不可欠であり、社会的なつながりを重視しています。" } },
+                    { id: 'D', label: "一人", result: { title: "自立心", desc: "あなたは内面的に強く自立しているか、現在一人の時間を楽しんでいます。" } }
+                ]
+            },
+            {
+                question: "2. 先に進むと、動物に出会いました。それはどんな動物ですか？",
+                options: [
+                    { id: 'A', label: "ウサギやリス（小動物）", result: { title: "小さな悩み", desc: "現在の人生の問題は小さく、簡単に解決できると感じています。" } },
+                    { id: 'B', label: "犬や猫（中型動物）", result: { title: "制御可能な課題", desc: "課題があることは認識していますが、対処できる自信があります。" } },
+                    { id: 'C', label: "クマやライオン（大型動物）", result: { title: "大きなプレッシャー", desc: "現在、圧倒されるような大きなプレッシャーや困難に直面しているかもしれません。" } }
+                ]
+            },
+            {
+                question: "3. さらに森の奥へ進むと、空き地に家がありました。その家はどれくらいの大きさですか？",
+                options: [
+                    { id: 'A', label: "小さな小屋", result: { title: "足るを知る", desc: "大きな野心はなく、シンプルで安定した生活を望んでいます。" } },
+                    { id: 'B', label: "普通の家", result: { title: "堅実", desc: "現実的な目標を持ち、標準的で幸せな生活を求めています。" } },
+                    { id: 'C', label: "巨大なお城", result: { title: "野心家", desc: "大きな野心と抱負を持ち、人生で大きな成功を望んでいます。" } }
+                ]
+            },
+            {
+                question: "4. 家の中に入ると、テーブルの上にカップがありました。そのカップの素材は何ですか？",
+                options: [
+                    { id: 'A', label: "プラスチックや紙", result: { title: "壊れやすい関係", desc: "現在の関係（または一緒に歩いていた人）が十分に強固ではなく、壊れやすいと感じているかもしれません。" } },
+                    { id: 'B', label: "ガラスや陶器", result: { title: "美しいが繊細", desc: "関係は美しいですが、注意深く扱わないとヒビが入る可能性があると考えています。" } },
+                    { id: 'C', label: "金属や木", result: { title: "強固な絆", desc: "この関係は非常に強固で、時間の試練に耐えられると信じています。" } }
+                ]
+            },
+            {
+                question: "5. 裏口から出ると、水辺がありました。それはどのような水ですか？",
+                options: [
+                    { id: 'A', label: "水たまり", result: { title: "淡白", desc: "現在、性や身体的な親密さはそれほど重要ではありません。" } },
+                    { id: 'B', label: "川や湖", result: { title: "適度な欲求", desc: "親密さに対して健全で適度な欲求を持っています。" } },
+                    { id: 'C', label: "広大な海", result: { title: "強い渇望", desc: "心の奥底で、深い感情的または身体的な融合を強く渇望しています。" } }
+                ]
+            }
+        ]
+      }
     ],
     types: {
       SECURE: {

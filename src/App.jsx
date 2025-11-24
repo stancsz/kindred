@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Heart, Shield, AlertCircle, ArrowRight, RefreshCw, CheckCircle, XCircle, Info, BookOpen, Star, Zap, Activity, Share2, Globe, Users } from 'lucide-react';
+import { Heart, Shield, AlertCircle, ArrowRight, RefreshCw, CheckCircle, XCircle, Info, BookOpen, Star, Zap, Activity, Share2, Globe, Users, Sparkles } from 'lucide-react';
 import { TRANSLATIONS } from './translations';
+import FunTest from './FunTest';
 
 // --- COMPONENTS ---
 
@@ -133,6 +134,7 @@ export default function AttachmentTest() {
   const [selectedOption, setSelectedOption] = useState(null);
   const [language, setLanguage] = useState('zh-CN');
   const [assessmentMode, setAssessmentMode] = useState('self'); // 'self' or 'partner'
+  const [activeFunTest, setActiveFunTest] = useState(null);
 
   const t = TRANSLATIONS[language];
 
@@ -145,6 +147,11 @@ export default function AttachmentTest() {
     setCurrentQIndex(0);
     setAnswers({});
     setSelectedOption(null);
+  };
+
+  const handleStartFunTest = (testId) => {
+    setActiveFunTest(testId);
+    setScreen('fun_test');
   };
 
   const handleAnswer = (value) => {
@@ -286,10 +293,40 @@ export default function AttachmentTest() {
                 {t.ui.library_btn}
               </button>
             </div>
+
+            {t.fun_tests && t.fun_tests.length > 0 && (
+              <div className="pt-4 border-t border-slate-100">
+                <h3 className="text-sm font-bold text-slate-900 mb-3 flex items-center gap-2">
+                   <Sparkles className="w-4 h-4 text-amber-500" />
+                   {t.ui.more_tests}
+                </h3>
+                <div className="space-y-3">
+                    {t.fun_tests.map(test => (
+                        <div key={test.id} className="bg-gradient-to-br from-indigo-50 to-purple-50 p-4 rounded-xl border border-indigo-100 flex gap-4 items-center group cursor-pointer hover:shadow-md transition-all"
+                             onClick={() => handleStartFunTest(test.id)}>
+                            <img src={test.image} alt={test.title} className="w-16 h-16 rounded-lg object-cover shadow-sm shrink-0" />
+                            <div className="flex-1">
+                                <h4 className="font-bold text-slate-800 text-sm mb-1 line-clamp-1">{test.title}</h4>
+                                <p className="text-xs text-slate-500 line-clamp-2 mb-2">{test.subtitle}</p>
+                                <span className="text-[10px] font-bold text-indigo-600 bg-white px-2 py-1 rounded-full shadow-sm">
+                                    {t.ui.fun_test_btn}
+                                </span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+              </div>
+            )}
+
           </div>
         </div>
       </div>
     );
+  }
+
+  if (screen === 'fun_test') {
+    const test = t.fun_tests.find(test => test.id === activeFunTest);
+    return <FunTest test={test} t={t} onBack={() => setScreen('intro')} />;
   }
 
   if (screen === 'library') {
