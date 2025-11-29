@@ -80,7 +80,7 @@ const QuadrantChart = ({ anxietyScore, avoidanceScore, t }) => {
 
 // --- NEW TABS ---
 
-const HomeTab = ({ t, handleStart, results, setScreen, setLibraryTab, setSelectedLibraryType }) => {
+const HomeTab = ({ t, handleStart, handleTestClick, results, setScreen, setLibraryTab, setSelectedLibraryType }) => {
   return (
     <div className="p-6 space-y-8 pb-24 animate-fade-in">
       {/* Header */}
@@ -97,7 +97,7 @@ const HomeTab = ({ t, handleStart, results, setScreen, setLibraryTab, setSelecte
       </div>
 
       {/* Main Card */}
-      <div className="glass-card rounded-2xl p-6 relative overflow-hidden group cursor-pointer transition-all hover:bg-white/15" onClick={() => handleStart('self', 'attachment')}>
+      <div className="glass-card rounded-2xl p-6 relative overflow-hidden group cursor-pointer transition-all hover:bg-white/15" onClick={() => handleTestClick('self', 'attachment')}>
         <div className="absolute top-0 right-0 p-4 opacity-50">
           <Sparkles className="w-24 h-24 text-purple-500/20 rotate-12" />
         </div>
@@ -108,7 +108,7 @@ const HomeTab = ({ t, handleStart, results, setScreen, setLibraryTab, setSelecte
           <h2 className="text-xl font-bold text-white mb-2">{t.ui.title}</h2>
           <p className="text-slate-300 text-sm mb-4 line-clamp-2">{t.ui.subtitle}</p>
           <div className="flex items-center gap-2 text-gold-400 text-sm font-medium group-hover:gap-3 transition-all">
-            <span>{results.self.attachment ? (t.ui.retake_test || '重新测试') : (t.ui.start_test || '开始测试')}</span>
+            <span>{results.self.attachment ? (t.ui.view_result || '查看结果') : (t.ui.start_test || '开始测试')}</span>
             <ArrowRight className="w-4 h-4" />
           </div>
         </div>
@@ -117,7 +117,7 @@ const HomeTab = ({ t, handleStart, results, setScreen, setLibraryTab, setSelecte
       {/* Secondary Cards Grid */}
       <div className="grid grid-cols-2 gap-4">
         {/* Love Style */}
-        <div className="glass-card rounded-2xl p-4 relative overflow-hidden group cursor-pointer hover:bg-white/15" onClick={() => handleStart('self', 'love_style')}>
+        <div className="glass-card rounded-2xl p-4 relative overflow-hidden group cursor-pointer hover:bg-white/15" onClick={() => handleTestClick('self', 'love_style')}>
            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center mb-3 shadow-lg shadow-pink-500/30">
               <Palette className="w-5 h-5 text-white" />
            </div>
@@ -127,7 +127,7 @@ const HomeTab = ({ t, handleStart, results, setScreen, setLibraryTab, setSelecte
         </div>
 
         {/* Partner Test */}
-        <div className="glass-card rounded-2xl p-4 relative overflow-hidden group cursor-pointer hover:bg-white/15" onClick={() => handleStart('partner', 'attachment')}>
+        <div className="glass-card rounded-2xl p-4 relative overflow-hidden group cursor-pointer hover:bg-white/15" onClick={() => handleTestClick('partner', 'attachment')}>
            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-3 shadow-lg shadow-cyan-500/30">
               <Users className="w-5 h-5 text-white" />
            </div>
@@ -511,6 +511,16 @@ export default function AttachmentTest() {
     setSelectedOption(null);
   };
 
+  const handleTestClick = (mode, type) => {
+      if (results[mode] && results[mode][type]) {
+          setAssessmentMode(mode);
+          setTestType(type);
+          setScreen('result');
+      } else {
+          handleStart(mode, type);
+      }
+  };
+
   const handleAnswer = (value) => {
     const questions = getQuestions();
     setSelectedOption(value);
@@ -730,6 +740,9 @@ export default function AttachmentTest() {
 
             {/* Actions */}
             <div className="space-y-3">
+               <button onClick={() => handleStart(assessmentMode, testType)} className="w-full glass-btn py-3 rounded-xl text-white font-semibold bg-white/5 border border-white/10">
+                  {t.ui.retake_test || "重新测试"}
+               </button>
                <button onClick={() => setScreen('intro')} className="w-full glass-btn py-3 rounded-xl text-white font-semibold">
                   {t.ui.back || "返回"}
                </button>
@@ -802,6 +815,7 @@ export default function AttachmentTest() {
              <HomeTab
                t={t}
                handleStart={handleStart}
+               handleTestClick={handleTestClick}
                results={results}
                setScreen={setScreen}
                setLibraryTab={setLibraryTab}
