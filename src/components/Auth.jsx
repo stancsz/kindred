@@ -34,7 +34,6 @@ const Auth = ({ t }) => {
         <h2 className="text-2xl font-bold text-white mb-6 text-center">
           {isLogin ? (t?.ui?.login || '登录') : (t?.ui?.register || '注册')}
         </h2>
-
         {error && (
           <div className="bg-red-500/20 border border-red-500/50 text-red-200 p-3 rounded-lg mb-6 flex items-center gap-2 text-sm">
             <AlertCircle className="w-4 h-4" />
